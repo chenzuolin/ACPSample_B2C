@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/QuYu.jsp=UTF-8
+encoding//WebContent/lunbo.jsp=UTF-8
+encoding//src/com/sec/entity/PayPaymentOrder.java=UTF-8
+encoding//src/com/sumeng/wenzi/Base64Util.java=UTF-8
+encoding//src/com/sumeng/wenzi/FileUtil.java=UTF-8
+encoding//src/com/sumeng/wenzi/GsonUtils.java=UTF-8
+encoding//src/com/sumeng/wenzi/HttpUtil.java=UTF-8
+encoding//src/com/unionpay/acp/demo/DemoBase.java=UTF-8

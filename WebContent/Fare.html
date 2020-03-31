@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="./layui/css/layui.css" rel="stylesheet" media="all">
+	<style type="text/css">
+	.layui-form-mid {color: black !important;}
+	.layui-elem-field{border:1px solid #009688}
+</style>
+</head>
+<body>
+<fieldset class="layui-elem-field">
+  <legend>运费修改</legend>
+  <div class="layui-field-box">
+<form class="layui-form" action="FareServlet">
+
+  <div class="layui-form-item">
+   
+    <div class="layui-input-inline">
+      <input type="number" name="b1" id="a1" required lay-verify="required" placeholder="请输入金额" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">元起价</div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-form-mid layui-word-aux">（包含</div>
+    <div class="layui-input-inline">
+      <input type="number" id="a2" name="b2" required lay-verify="required" placeholder="请输入重量" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">斤，
+    
+    </div>
+    
+     <div class="layui-input-inline">
+      <input type="number" id="a3" name="b3" required lay-verify="required" placeholder="请输入路程" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">公里）
+    </div>
+    
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-form-mid layui-word-aux">每增加</div>
+    <div class="layui-input-inline">
+      <input type="number" id="a4" name="b4" required lay-verify="required" placeholder="请输入路程" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">公里，增加
+    
+    </div>
+    
+     <div class="layui-input-inline">
+      <input type="number" id="a5" name="b5" required lay-verify="required" placeholder="请输入金额" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">元
+    </div>
+    
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-form-mid layui-word-aux">每增加</div>
+    <div class="layui-input-inline">
+      <input type="number" id="a6" name="b6" required lay-verify="required" placeholder="请输入重量" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">斤，增加
+    
+    </div>
+    
+     <div class="layui-input-inline">
+      <input type="number" name="b7" id="a7" required lay-verify="required" placeholder="请输入金额" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux">元
+    </div>
+    
+  </div>
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn"  type="submit">修改</button>
+  
+    </div>
+  </div>
+
+	
+		<script src="js/jquery.js"></script>
+		<script>
+		$.ajax("http://211.149.232.210/ACPSample_B2C/Fare_appServlet",{
+			dataType: "json",
+			type: "get", 
+			success: function(data) {
+				var html = "";
+				for(var i = 0; i<data.length;i++){
+					html += data[i].aa +'元起价（包含' + data[i].bb + '公斤，' + data[i].cc + '公里）<br />每增加' + data[i].dd + '公里增加' + data[i].ee + '元<br />每增加' + data[i].ff + '斤增加' + data[i].gg + '元';
+				}
+				$("#did").append(html);
+			},
+			error: function(data){
+				mui.alert("数据获取失败！");
+				//plus.ui.toast();
+				//return false;
+			}
+		});
+		</script>
+		</form>
+		
+		  </div>
+</fieldset>
+<fieldset class="layui-elem-field">
+  <legend>运费数据</legend>
+  <div class="layui-field-box">
+	<div id="did"></div>
+			  </div>
+</fieldset>
+	</body>
+</html>

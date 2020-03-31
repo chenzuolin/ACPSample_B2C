@@ -1,0 +1,52 @@
+*{margin: 0;padding: 0;list-style: none;}
+body{position: relative;}
+.content{
+	width:1200px;
+	height: auto;
+	position: absolute;
+	background: #fff;
+	left: calc(50% - 600px);
+}
+.content h3{
+	text-align: center;
+	font-weight: bold;
+	
+}
+.content p{margin: 10px 0;}
+.content p span{font-weight: bold;}
+.content p:nth-child(10){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(11){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(12){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(13){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(14){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(17){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(18){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(19){padding-left: 30px;text-decoration:underline }
+.content p:nth-child(27){padding-left: 30px;}
+.content p:nth-child(28){padding-left: 30px;}
+.content p:nth-child(29){padding-left: 30px;}
+.content p:nth-child(42){padding-left: 30px;}
+.content p:nth-child(43){padding-left: 30px;}
+.content p:nth-child(44){padding-left: 30px;}
+.content p:nth-child(45){padding-left: 30px;}
+.content p:nth-child(46){padding-left: 30px;}
+.content p:nth-child(47){padding-left: 30px;}
+.content p:nth-child(48){padding-left: 30px;}
+.content p:nth-child(49){padding-left: 30px;}
+.content p:nth-child(70){padding-left: 30px;}
+.content p:nth-child(71){padding-left: 30px;}
+.content p:nth-child(72){padding-left: 30px;}
+.content p:nth-child(73){padding-left: 30px;}
+.content p:nth-child(76){padding-left: 30px;}
+.content p:nth-child(77){padding-left: 30px;}
+.content p:nth-child(78){padding-left: 30px;}
+.content p:nth-child(83){padding-left: 30px;}
+.content p:nth-child(84){padding-left: 30px;}
+.content p:nth-child(85){padding-left: 30px;}
+.content p:nth-child(86){padding-left: 30px;}
+.content p:nth-child(87){padding-left: 30px;}
+.content p:nth-child(94){padding-left: 30px;}
+.content p:nth-child(95){padding-left: 30px;}
+.content p:nth-child(96){padding-left: 30px;}
+.content p:nth-child(97){padding-left: 30px;}
+.content p:nth-child(98){padding-left: 30px;}

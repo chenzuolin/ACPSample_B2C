@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+        <%@ page import="com.sec.dao.*" %>
+<%@ page import="com.sec.entity.*" %>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	float zz = 0;
+	List<Indent> list = (List<Indent>)request.getAttribute("list");
+	String aa = request.getSession().getAttribute("cc").toString();
+	WineshopDao dao = new WineshopDao();
+	int bb = dao.findUserByID3(aa);//酒店编号
+	for(Indent indent : list){
+		int cc = indent.getWineshop_ID();
+		if(bb==cc){
+			int dd = indent.getIndent_ID();
+			TotalDao dao1 = new TotalDao();
+			List<Total> list1 = dao1.findUserByID1(dd);
+			for(Total total : list1){
+				float ee = total.getTotal();
+				zz += ee;
+%>
+<%
+			}
+		}
+	}
+%>
+<script src="layui/layui.js"></script>
+ <script>
+ layui.use('layer', function(){
+     var layer = layui.layer;
+     layer.open({
+         type: 1, 
+         area: ['400px', '200px'],
+         maxmin: true ,
+         title:'<h style="color:skyblue;font-size:15px;"><strong>酒店销售额</strong></h>',
+         anim: 1,
+         content: '<div style="width:400px;height:157px;background:rgb(95,184,120);text-align:center;line-height:154px;font-size:20px;"><strong>该酒店在本店共消费了:<span style="color:red;">￥<%=zz %></span>元</strong></div>' 
+       });
+   }); 
+</script>
+</body>
+</html>
